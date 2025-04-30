@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    place-content: center;
+    place-items: center;
+    background: burlywood;
+}
+section {
+    background: rgba(255, 255, 255, 0.281);
+    border-radius: 30px;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    text-shadow: burlywood 2px 3px;
+}
+input {
+    border-radius: 30px;
+    text-shadow: rgb(206, 156, 136) 0.5px 0.5px;
+}
+button {
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background: rgb(206, 156, 136);
+}

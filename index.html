@@ -4,28 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Suas tarefas</h1>
-    <ul>
-        <li>Estudo Portuga</li>
-        <li>Estudo Matematica</li>
-        <li>Estudo Biologia</li>
-    </ul>
-    <input>
-    <button onclick="addtarefa()">Add</button>
+    <section>
+        <h1>Suas tarefas</h1>
+        <ul>
+            <li>Estudo Portuga</li>
+            <li>Estudo Matematica</li>
+            <li>Estudo Biologia</li>
+        </ul>
+        <input placeholder="Sua nova tarefa aqui...">
+        <button onclick="addtarefa()">Add</button>
+    </section>
 </body>
-<script>
-    function addtarefa() {
-        const ul = document.querySelector("ul")
-        const input = document.querySelector("input")
-        const tarefa = input.value
-        
-        const li = document.createElement("li")
-        li.innerText = tarefa
-        ul.appendChild(li)
-        
-        input.value = ""
-    }
-</script>
 </html>
