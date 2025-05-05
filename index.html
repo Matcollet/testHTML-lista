@@ -5,18 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <section>
-        <h1>Suas tarefas</h1>
-        <ul>
-            <li>Estudo Portuga</li>
-            <li>Estudo Matematica</li>
-            <li>Estudo Biologia</li>
-        </ul>
+        <h1>𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝚃𝙰𝚁𝙴𝙵𝙰𝚂</h1>
+        <h2>Suas tarefas</h2>
+        <ul></ul>
         <input placeholder="Sua nova tarefa aqui...">
         <button onclick="addtarefa()">Add</button>
     </section>
+    <script>
+        // estado da aplicação ó
+const tarefas = ['Estudo Portuga', 'Estudo Matematica', 'Estudo Biologia']
+
+function addtarefa() {
+    const input = document.querySelector("input")
+    const tarefa = input.value
+    tarefas.push(tarefa)
+    input.value = ""
+    render()
+}
+
+function render() {
+    const ul = document.querySelector("ul")
+    ul.innerHTML = null
+
+    tarefas.forEach(function (tarefa) {
+        const li = document.createElement("li")
+        li.innerText = tarefa
+        ul.appendChild(li)
+    })
+
+}
+
+render()
+    </script>
 </body>
 </html>

@@ -10,9 +10,14 @@ body {
 section {
     background: rgba(255, 255, 255, 0.281);
     border-radius: 30px;
-    padding: 20px;
+    padding: 250px 400px;
+    padding-top: 0;
 }
 h1 {
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+h2 {
     text-align: center;
     text-shadow: burlywood 2px 3px;
 }
@@ -24,4 +29,17 @@ button {
     border-radius: 5px;
     color: rgb(0, 0, 0);
     background: rgb(206, 156, 136);
+    border-color: rgb(153, 114, 98);
+    padding: 1px 10px;
+}
+button:hover {
+    background: rgb(153, 114, 98);
+    cursor: pointer;
+}
+ul {
+    padding: 10px;
+}
+li {
+    padding: 3px;
+    font-size: 18px;
 }
