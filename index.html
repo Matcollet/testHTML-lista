@@ -11,7 +11,7 @@
         <h1>𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝚃𝙰𝚁𝙴𝙵𝙰𝚂</h1>
         <h2>Suas tarefas</h2>
         <ul></ul>
-        <input placeholder="Sua nova tarefa aqui...">
+        <input id="tarefainput" placeholder="Sua nova tarefa aqui...">
         <button id="addbtn" onclick="addtarefa()">Add</button>
     </section>
     <script>
@@ -48,6 +48,12 @@ function render() {
     })
 
 }
+
+document.querySelector("#tarefainput").addEventListener("keydown", function (event) {
+    if (event.key == "a") {
+        addtarefa()
+    }
+})
 
 render()
     </script>
