@@ -20,6 +20,7 @@ h1 {
 h2 {
     text-align: center;
     text-shadow: burlywood 2px 3px;
+    font-family: 'Courier New', Courier, monospace;
 }
 input {
     border-radius: 30px;
@@ -31,8 +32,14 @@ button {
     background: rgb(206, 156, 136);
     border-color: rgb(153, 114, 98);
     padding: 1px 10px;
+    transition: transform 0.2s ease;
 }
-button:hover {
+#addbtn:hover {
+    background: rgb(153, 114, 98);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#rmvbtn:hover {
     background: rgb(153, 114, 98);
     cursor: pointer;
 }

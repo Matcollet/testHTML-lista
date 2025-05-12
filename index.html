@@ -12,15 +12,18 @@
         <h2>Suas tarefas</h2>
         <ul></ul>
         <input placeholder="Sua nova tarefa aqui...">
-        <button onclick="addtarefa()">Add</button>
+        <button id="addbtn" onclick="addtarefa()">Add</button>
     </section>
     <script>
         // estado da aplicação ó
-const tarefas = ['Estudo Portuga', 'Estudo Matematica', 'Estudo Biologia']
+const tarefas = []
 
 function addtarefa() {
     const input = document.querySelector("input")
     const tarefa = input.value
+    if (tarefa == "") {
+        return
+    }
     tarefas.push(tarefa)
     input.value = ""
     render()
@@ -28,12 +31,20 @@ function addtarefa() {
 
 function render() {
     const ul = document.querySelector("ul")
-    ul.innerHTML = null
+    ul.innerHTML = ""
 
-    tarefas.forEach(function (tarefa) {
+    tarefas.forEach(function (tarefa, index) {
         const li = document.createElement("li")
         li.innerText = tarefa
         ul.appendChild(li)
+        const btn = document.createElement("button")
+        btn.innerText = "Excluir"
+        btn.id = "rmvbtn"
+        btn.onclick = function() {
+            tarefas.splice(index, 1)
+            render()
+        }
+        li.appendChild(btn)
     })
 
 }
