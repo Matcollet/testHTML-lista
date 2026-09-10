@@ -3,59 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lista de tarefas</title>
 </head>
 <body>
-    <section>
-        <h1>𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝚃𝙰𝚁𝙴𝙵𝙰𝚂</h1>
-        <h2>Suas tarefas</h2>
-        <ul></ul>
-        <input id="tarefainput" placeholder="Sua nova tarefa aqui...">
-        <button id="addbtn" onclick="addtarefa()">Add</button>
-    </section>
-    <script>
-        // estado da aplicação ó
-const tarefas = []
-
-function addtarefa() {
-    const input = document.querySelector("input")
-    const tarefa = input.value
-    if (tarefa == "") {
-        return
-    }
-    tarefas.push(tarefa)
-    input.value = ""
-    render()
-}
-
-function render() {
-    const ul = document.querySelector("ul")
-    ul.innerHTML = ""
-
-    tarefas.forEach(function (tarefa, index) {
-        const li = document.createElement("li")
-        li.innerText = tarefa
-        ul.appendChild(li)
-        const btn = document.createElement("button")
-        btn.innerText = "Excluir"
-        btn.id = "rmvbtn"
-        btn.onclick = function() {
-            tarefas.splice(index, 1)
-            render()
-        }
-        li.appendChild(btn)
-    })
-
-}
-
-document.querySelector("#tarefainput").addEventListener("keydown", function (event) {
-    if (event.key == "Enter") {
-        addtarefa()
-    }
-})
-
-render()
-    </script>
+    <h1>minhas tarefas</h1>
 </body>
 </html>
