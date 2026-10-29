@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefas</title>
+    <title>minhas tarefas</title>
 </head>
 <body>
-    <h1>minhas tarefas</h1>
+    <h1>lista de tarefas</h1>
+    <input placeholder="digite sua nova tarefa">
+    <button onclick="add()">adicionar</button>
+    <ul></ul>
+
+    <script>
+        const tarefas = []
+
+        function add() {
+            const input = document.querySelector("input")
+            const texto = input.value
+            tarefas.push(texto)
+            renderizar()
+        }
+
+        function renderizar() {
+            const ul = document.querySelector("ul")
+            ul.innerHTML = null
+            tarefas.forEach((tarefa) => {
+                const li = document.createElement("li")
+                li.innerText = tarefa
+                ul.appendChild(li)
+            })
+        }
+        renderizar()
+    </script>
 </body>
 </html>
